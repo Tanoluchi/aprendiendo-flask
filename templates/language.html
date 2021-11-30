@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title%} Lenguajes {{ super() }} {% endblock %}
+
+{% block content %}
+    <h1>Pagina de lenguajes</h1>
+    <h2>Listado de lenguajes</h2>
+    <ul>
+        {% for language in languages %}
+            <li>
+                {{loop.index}}. {{language}}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
