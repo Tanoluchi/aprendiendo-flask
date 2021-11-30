@@ -1,11 +1,9 @@
 {% extends 'layout.html' %}
 
-{% block title %} Inicio {{ super() }} {% endblock  %}
+{% block title%} {{coche.2}} {{ super() }}{% endblock %}
 
 {% block content %}
-    <h1>Pagina de Inicio</h1>
-
-    {% with messages = get_flashed_messages() %}
+{% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
                 <div class='success'> 
@@ -14,5 +12,16 @@
             {% endfor %}
         {% endif %}
     {% endwith %}
-    {# comentario #}
+    
+    <h1>{{coche.1}}</h1>
+        
+    <span class="date">
+        {{coche.2}}
+        |
+        {{coche.3}}
+    </span>
+    <p>
+        {{coche.4}}
+    </p>
+
 {% endblock %}
